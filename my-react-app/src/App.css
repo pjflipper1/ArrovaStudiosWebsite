@@ -1,0 +1,38 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0; /* Padding around the navbar */
+    display: inline; /* Display list items horizontally */
+    display: inline; /* Display list items horizontally */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    text-align: center; /* Center align the navigation links */
+}
+
+.navbar ul li {
+    display: inline; /* Display list items horizontally */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around each link */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.navbar ul li a:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+.content {
+    padding: 20px; /* Padding for main content */
+    text-align: center; /* Center align main content */
+}
