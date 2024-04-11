@@ -1,49 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Home from './Home';
+import Watch from './Watch';
+import Games from './Games';
+import About from './About';
 
-function ToolBar(){
-  return(
-      <div className='navbar'>
-          <img src='C:\Users\ammaa\Downloads\arrova\ArrovaStudiosWebsite\my-react-app\src\assets\channels4_profile.jpg'></img>
-          <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Watch</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">About</a></li>
-      </ul>
-      </div>
-  )
-}
-function MainContent() {
-  var CurrentSlide = 1;
-  if (CurrentSlide === 1) {
-    return (
-      <div className='watch'>
-        <h1>Watch</h1>
-      </div>
-    );
-  }
-  // Default return in case the condition is not met
+function ToolBar({ setCurrentSlide }) {
   return (
-    <div className='default'>
-      <h1>Default Content</h1>
+    <div className='navbar'>
+      <ul>
+        <li><button onClick={() => setCurrentSlide(0)}>Home</button></li>
+        <li><button onClick={() => setCurrentSlide(1)}>Watch</button></li>
+        <li><button onClick={() => setCurrentSlide(2)}>Games</button></li>
+        <li><button onClick={() => setCurrentSlide(3)}>About</button></li>
+      </ul>
     </div>
   );
 }
 
-function FooterBar(){
-  return(
-      <div>
-          <h1>Footer</h1>
+function MainContent({ currentSlide }) {
+  if (currentSlide === 0) {
+    return (
+      <Home />
+    );
+  } else if (currentSlide === 1) {
+    return (
+      <Watch />
+    );
+  } else if (currentSlide === 2) {
+    return (
+      <Games />
+    );
+  } else if (currentSlide === 3) {
+    return (
+      <About />
+    );
+  } else {
+    return (
+      <div className='default'>
+        <h1>Default Content</h1>
       </div>
+    );
+  }
+}
+
+function FooterBar() {
+  return (
+    <div>
+      <h1>Footer</h1>
+    </div>
   );
 }
 
 function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide
+
   return (
     <div className="HomePage">
-      <ToolBar />
-      <MainContent />
+      <ToolBar setCurrentSlide={setCurrentSlide} />
+      <MainContent currentSlide={currentSlide} />
       <FooterBar />
     </div>
   );
