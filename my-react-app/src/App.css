@@ -41,3 +41,13 @@ ul {
     padding: 20px; /* Padding for main content */
     text-align: center; /* Center align main content */
 }
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar img{
+    height: 35px;
+    width: 35px;
+}

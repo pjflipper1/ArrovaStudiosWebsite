@@ -8,12 +8,17 @@ import About from './About';
 function ToolBar({ setCurrentSlide }) {
   return (
     <div className='navbar'>
-      <ul>
-        <li><button onClick={() => setCurrentSlide(0)}>Home</button></li>
-        <li><button onClick={() => setCurrentSlide(1)}>Watch</button></li>
-        <li><button onClick={() => setCurrentSlide(2)}>Games</button></li>
-        <li><button onClick={() => setCurrentSlide(3)}>About</button></li>
-      </ul>
+      <div className='buttens'>
+        <div className='unerwear'>
+          <img src='https://xsxsnxbhnvtyrnfrhkcy.supabase.co/storage/v1/object/sign/Beats/channels4_profile%20(1).jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJCZWF0cy9jaGFubmVsczRfcHJvZmlsZSAoMSkuanBnIiwiaWF0IjoxNzEyOTEwOTcyLCJleHAiOjc3Nzc3MTI5MTA5NzJ9.7qZh2QAepGs-3cEfLjIjZP1lFctZQHtldGSX9vrXqwQ&t=2024-04-12T08%3A36%3A11.581Z'></img>
+        </div>
+        <ul>
+          <li><button onClick={() => setCurrentSlide(0)}>Home</button></li>
+          <li><button onClick={() => setCurrentSlide(1)}>Watch</button></li>
+          <li><button onClick={() => setCurrentSlide(2)}>Games</button></li>
+          <li><button onClick={() => setCurrentSlide(3)}>About</button></li>
+        </ul>
+      </div>
     </div>
   );
 }
