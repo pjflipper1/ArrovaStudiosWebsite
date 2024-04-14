@@ -54,11 +54,17 @@ ul {
 
 .show-tile{
     background-color: aliceblue;
-    width: 444px;
-    height: 247px;
-    border-radius: 4px;
+    width: 427px;
+    height: 240px;
+}
+
+.button{
     margin-top: 11px;
     margin-bottom: 11px;
     margin-left: 13px;
     margin-right: 13px;
+}
+
+.watch{
+    overflow: auto;
 }
