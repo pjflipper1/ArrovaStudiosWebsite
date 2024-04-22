@@ -58,13 +58,24 @@ ul {
     height: 240px;
 }
 
-.button{
+.tile-button{
     margin-top: 11px;
     margin-bottom: 11px;
-    margin-left: 13px;
+    margin-left: 21px;
     margin-right: 13px;
 }
 
 .watch{
     overflow: auto;
+    margin-bottom: 139px;
+}
+
+.layout {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Align children in a row; change to column if vertical spacing is needed */
+    gap: 10px; /* Space between each sub-object */
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 33px;
+    margin-right: 53px;
 }
